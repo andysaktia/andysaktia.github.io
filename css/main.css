@@ -1,4 +1,4 @@
 .center {
  display: flex;
- content-align: center;
+ justify-content: center;
 }
