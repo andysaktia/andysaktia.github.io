@@ -145,6 +145,15 @@
                     </a>
                 </div>
             </div>
+            <div class="container">
+              <table id="myTable">
+                  <tr>
+                      <th>Zipcode</th>
+                      <th>City</th>
+                      <th>County</th>
+                  </tr>
+              </table>
+            </div>
         </section>
         <!-- Contact Section-->
         <section class="page-section" id="contact">
@@ -214,9 +223,10 @@
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a> 
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
@@ -453,5 +463,20 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+          $.ajax({
+              url: 'data.json',
+              dataType: 'json',
+              success: function(data) {
+                  for (var i=0; i<data.length; i++) {
+                      var row = $('<tr><td>' + data[i].zipcode+ '</td><td>' + data[i].city + '</td><td>' + data[i].county + '</td></tr>');
+                      $('#myTable').append(row);
+                  }
+              },
+              error: function(jqXHR, textStatus, errorThrown){
+                  alert('Error: ' + textStatus + ' - ' + errorThrown);
+              }
+          });
+          </script>
     </body>
 </html>
