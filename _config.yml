@@ -31,14 +31,14 @@ minima:
     microdotblog: jekyll
     keybase: jekyll
 
-    Mastodon instances
+    # Mastodon instances
     mastodon:
     - username: jekyll
       instance: example.com
     - username: jekyll2
       instance: example.com
 
-    GitLab instances
+    # GitLab instances
     gitlab:
     - username: jekyll
       instance: example.com
