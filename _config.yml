@@ -2,8 +2,7 @@ title: as-projects
 author:
   name: andysaktia
   email: andysaktia@gmail.com
-description: > # this means to ignore newlines until "show_excerpts:"
-  Share the idea that make you crazy enough for change mindset or just enjoy the words.
+description: # this means to ignore newlines until "show_excerpts:"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
