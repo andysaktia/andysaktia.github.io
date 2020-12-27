@@ -7,5 +7,5 @@ link-git: learnJS
 link-web:
 ---
 
-(link)[https://andysaktia.github.io/learnJS]
+[link](https://andysaktia.github.io/learnJS)
  
