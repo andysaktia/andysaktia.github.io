@@ -49,9 +49,9 @@ minima:
 # header_pages:
 # - about.md
 
-# collections:
-#   category:
-#     output: true
+collections:
+  category:
+    output: true
 # defaults:
 #   -
 #     scope:
