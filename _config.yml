@@ -1,4 +1,4 @@
-title: as-projects
+title: Proyeku
 author:
   name: andysaktia
   email: andysaktia@gmail.com
@@ -48,18 +48,7 @@ minima:
 # this and add the path to the pages in order as they should show up
 # header_pages:
 # - about.md
-
-collections:
-  category:
-    output: true
-defaults:
-  -
-    scope:
-      path: ""
-      type: category
-    values:
-      layout: "category"
-
+  
 # Build settings
 theme: minima
 
