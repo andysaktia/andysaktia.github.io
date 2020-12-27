@@ -69,4 +69,4 @@ plugins:
 
 
 #permalink
-permalink: /:categories/:title/
+#permalink: /:categories/:title/
