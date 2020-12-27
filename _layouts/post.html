@@ -1,23 +1,22 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<div class="tags">
-    {% assign sortedCategories = page.categories | sort %}
-    {% for category in sortedCategories %}
-        <span class="tag">
-            <a href="/category/{{ category }}">#{{ category }}</a>
-        </span>
-    {% endfor %}
-</div>
-
-
-<hr>
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <div class="post-categories">
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+      {% for category in categories %}
+      <a href="{{site.baseurl}}/categories/#{{category|slugize}}">#{{category}}</a>
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+    </div>
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -49,37 +48,7 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
-
-<!-- related post -->
-
-<div class="related">
-    <h3>Related Posts</h3>
-    {% assign firstCategory = page.categories | first %}
-    {% assign relatedCount = 0 %}
-    {% for related in site.categories[firstCategory] %}
-        {% unless page.permalink == related.permalink %}
-            {% assign relatedCount = relatedCount | plus: 1 %}
-            <a href="{{related.permalink}}">{{ related.title }}</a>
-        {% endunless %}
-
-        {% if relatedCount == 3 %}
-            {% break %}
-        {% endif %}
-    {% endfor %}
-</div>
-
-</article>
-<hr>
-
  
-<!-- <div class="post-categories">
-  {% if post %}
-    {% assign categories = post.categories %}
-  {% else %}
-    {% assign categories = page.categories %}
-  {% endif %}
-  {% for category in categories %}
-  <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
-</div> -->
+
+</article> 
+ 
