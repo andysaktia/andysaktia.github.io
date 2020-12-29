@@ -10,6 +10,9 @@ Usaha dalam membuat blog proyek saja
 - Build with Jekyll and Ruby
 - Menggunakan server GitHub page 
 
+## Features
+- Categories link
+
 ## Author
 
 - Andy Saktia
