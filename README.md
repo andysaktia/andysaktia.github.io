@@ -16,7 +16,7 @@ Usaha dalam membuat blog proyek saja
 ## Author
 
 - Andy Saktia
-<!--
+
 ## License
-This project is open source and available under the [MIT License](LICENSE).
--->
+This project is open source and available under the [MIT License](LICENSE.txt).
+
