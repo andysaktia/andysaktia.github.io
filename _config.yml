@@ -26,7 +26,7 @@ plugins:
  - jekyll-feed
  - jekyll-seo-tag
 
-include: ['_pages']
+include: '_pages'
 
 # permalink
 permalink: /:categories/:title/
