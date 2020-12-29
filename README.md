@@ -4,7 +4,7 @@ Usaha dalam membuat blog proyek saja
 
 ### [Lihat blog](https://taniarascia.com/make-a-static-website-with-jekyll)
 
-## Bgm?
+## How?
 
 - Terinspirasi dari static site generators
 - Build with Jekyll and Ruby
